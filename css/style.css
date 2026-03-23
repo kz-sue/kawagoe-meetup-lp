@@ -64,7 +64,7 @@ main {
 }
 
 .section {
-  padding: 56px 20px;
+  padding: 40px 20px;
   max-width: var(--max);
   margin: 0 auto;
 }
@@ -181,11 +181,46 @@ ul {
   display: block;
 }
 
+/* 交流会の特徴 */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.feature {
+  background: #fff;
+  padding: 20px;
+  border-radius: var(--radius);
+  border: 1px solid #eee;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.feature h3 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  color: var(--text);
+}
+
+.feature p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 footer {
   text-align: center;
   padding: 30px 20px;
   font-size: 14px;
   color: var(--muted);
+}
+
+.sponsor {
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px !important;
 }
 
 /* スマホ最適化 */
@@ -198,7 +233,6 @@ footer {
   }
   .profile{
     grid-template-columns: 1fr;
-    text-align: center;
   }
   .profile__avatar{
     margin: 0 auto;
@@ -206,6 +240,14 @@ footer {
   .profile__links{
     justify-content: center;
     flex-wrap: wrap;
+  }
+  .features {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .feature {
+    padding: 16px;
   }
   .map-container iframe {
     height: 250px;
